@@ -1,0 +1,84 @@
+
+* {
+  box-sizing: border-box;
+}
+
+$primary-color: #cccccc;
+$secondary-color: #eeeeee;
+@import "components/MovieCard/MovieCard";
+@import "components/FavoritesList/FavoritesList";
+@import "components/MoviesList/MoviesList";
+
+.app {
+  margin: 0 auto;
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 10px;
+}
+
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  display: flex;
+  gap: 20px;
+  padding: 30px;
+  background-color: #cccccc;
+
+  &__desc{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__star {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+  }
+
+  &__genres {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 10px;
+  }
+
+  &__genre {
+    background-color: #eeeeee;
+    padding: 10px;
+  }
+
+
+  &__right {
+   display: grid;
+    grid-template-rows: 100px 1fr 75px;
+  }
+
+  &__peole {
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+
+
+
+
+
