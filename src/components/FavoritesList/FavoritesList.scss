@@ -2,8 +2,8 @@
   position: relative;
   width: 20%;
   min-width: 200px;
-  border: 1px solid black;
-  background-color: $primary-color;
+  background-color: #e8f6f7;
+  border-radius: 8px;
 
   $this: &;
 
@@ -23,8 +23,9 @@
 
   @media (max-width: 767px) {
     position: fixed;
-    height: 100vh;
+    z-index: 1;
     top: 0;
+    height: 100vh;
     right: -200px;
 
     &--opened {
@@ -34,7 +35,7 @@
 }
 
 .favorites-list {
-  padding: 30px;
+  padding: 30px 24px;
   list-style: none;
   display: flex;
   flex-direction: column;
@@ -44,5 +45,23 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
+  }
+
+  &__del {
+    border: none;
+    background: none;
+    color: #aeb5bc;
+
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+      color: #e36060;
+    }
+
+    &:hover {
+      color: #e36060;
+      cursor: pointer;
+    }
   }
 }

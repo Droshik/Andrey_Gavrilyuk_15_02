@@ -1,18 +1,32 @@
 .movie-card {
   $this: &;
 
+  position: relative;
   display: flex;
-  padding: 10px;
-  border: 1px solid black;
-  border-radius: 20px;
-  background-color: $primary-color;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  text-decoration: none;
+  font-size: 14px;
+  text-align: center;
 
-  &__img {
-    filter: grayscale(100%);
+  &:hover {
+    opacity: 0.8;
   }
 
   &__desc {
     display: flex;
+  }
+
+  &__name {
+    font-weight: bold;
+  }
+
+  &__star-button {
+    position: absolute;
+    right: -10px;
+    top: -5px;
   }
 
   &--card {

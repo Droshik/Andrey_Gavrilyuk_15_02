@@ -1,0 +1,109 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  &__star {
+    position: static;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    height: 80%;
+    display: flex;
+    gap: 20px;
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #f3f3f3;
+  }
+
+  &__left {
+    min-width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  &__img {
+    max-width: 100%;
+    max-height: 75%;
+    align-self: center;
+  }
+
+  &__desc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+    align-items: center;
+  }
+
+  &__movie-desc {
+    line-height: 1.7;
+  }
+
+  &__star {
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+  }
+
+  &__genres {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-items: center;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__genre {
+    padding: 8px 15px;
+    border: 1px solid #518a9b;
+    border-radius: 8px;
+    background-color: #e8f6f7;
+  }
+
+  &__right {
+    display: grid;
+    grid-template-rows: 100px 1fr 75px;
+  }
+
+  &__peole {
+    align-self: end;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: none;
+    color: #aeb5bc;
+
+    &:focus,
+    &:active {
+      border: none;
+      outline: none;
+      color: #e36060;
+    }
+
+    &:hover {
+      color: #e36060;
+      cursor: pointer;
+    }
+  }
+}

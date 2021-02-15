@@ -1,13 +1,8 @@
-
 * {
   box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+  color: #53555b;
 }
-
-$primary-color: #cccccc;
-$secondary-color: #eeeeee;
-@import "components/MovieCard/MovieCard";
-@import "components/FavoritesList/FavoritesList";
-@import "components/MoviesList/MoviesList";
 
 .app {
   margin: 0 auto;
@@ -18,67 +13,30 @@ $secondary-color: #eeeeee;
   gap: 30px;
   padding: 10px;
 }
+.star-button {
+  position: relative;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  width: 39px;
+  height: 36px;
+  cursor: pointer;
+  z-index: 1;
 
-
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80vw;
-  display: flex;
-  gap: 20px;
-  padding: 30px;
-  background-color: #cccccc;
-
-  &__desc{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    gap: 10px;
-    align-items: center;
-  }
-
-  &__star {
-    width: 30px;
-    height: 30px;
-    background-color: #fff;
-  }
-
-  &__genres {
+  .star {
+    fill: gray;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    justify-items: center;
-    gap: 10px;
-  }
+    height: 100%;
+    pointer-events: none;
 
-  &__genre {
-    background-color: #eeeeee;
-    padding: 10px;
-  }
-
-
-  &__right {
-   display: grid;
-    grid-template-rows: 100px 1fr 75px;
-  }
-
-  &__peole {
-    align-self: end;
-    display: flex;
-    flex-direction: column;
-  }
-
-  &__close {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+    &--is-active {
+      fill: gold;
+    }
   }
 }
 
-
-
-
-
-
+@import "components/MovieCard/MovieCard";
+@import "components/FavoritesList/FavoritesList";
+@import "components/MoviesList/MoviesList";
+@import "components/Modal/Modal";
